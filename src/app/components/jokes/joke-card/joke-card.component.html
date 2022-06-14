@@ -1,6 +1,6 @@
 <div class="card__container" *ngIf="joke?.question">
   <div>{{ joke?.question }}</div>
-  <div *ngIf="showAnswer">{{ joke?.answer }}</div>
+  <div class="answer" *ngIf="showAnswer">{{ joke?.answer }}</div>
   <div class="button__container">
   <button class="button__tell" (click)="toggleAnswerVisibility()">{{ buttonTitle }}</button>
   <button class="button__delete" (click)="deleteJoke()">Delete</button>
