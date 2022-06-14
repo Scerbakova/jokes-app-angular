@@ -9,7 +9,7 @@ import { Joke } from 'src/app/models/joke.model';
 export class JokeCardComponent {
   @Input() joke?: Joke;
   showAnswer = false;
-  buttonTitle = 'Show';
+  buttonTitle = 'Tell me';
 
   @Output()
     deleteJokeEvent = new EventEmitter<null>()
@@ -20,7 +20,7 @@ export class JokeCardComponent {
       this.buttonTitle = 'Hide';
     } else {
       this.showAnswer = !this.showAnswer;
-      this.buttonTitle = 'Show';
+      this.buttonTitle = 'Tell me';
     }
   }
 

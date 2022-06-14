@@ -1,11 +1,11 @@
 <form class="form" [formGroup]="jokeForm">
-  <div>
+  <div class="input__container">
     <label class="label" for="inputQuestion">Question</label>
-    <input #inputQuestion type="text" formControlName="question" />
+    <input #inputQuestion type="text" formControlName="question" placeholder="Enter the question"/>
   </div>
-  <div>
+  <div class="input__container">
     <label class="label" for="inputAnswer">Answer</label>
-    <input #inputAnswer type="text" formControlName="answer" />
+    <input #inputAnswer type="text" formControlName="answer" placeholder="Enter the ounchline" />
   </div>
   <button [disabled]="!jokeForm.valid" class="button" (click)="addJoke()" type="button">Create</button>
 </form>
