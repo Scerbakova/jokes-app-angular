@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import '/src/assets/styles/reset.scss'
+@import '/src/assets/styles/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  background-color: rgb(65, 72, 82);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}

@@ -1,0 +1,33 @@
+.form {
+  background-color: #14ecda;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.label,
+.button {
+  color: azure;
+  text-shadow: 1px 1px 1px rgb(22, 32, 75);
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: darkslategray;
+  cursor: pointer;
+  &:hover {
+    color: azure;
+    background-color: rgb(1, 58, 58);
+  }
+  &:active {
+    color: #14ecdac9;
+    background-color: rgb(3, 158, 158);
+  }
+};
+
+.button:disabled {
+  color: #14ecdac9;
+  background-color: rgb(3, 158, 158);
+  cursor: not-allowed;
+}
