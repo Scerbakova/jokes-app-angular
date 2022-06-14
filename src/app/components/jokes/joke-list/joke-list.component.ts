@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Joke } from 'src/app/models/joke.model';
 
 @Component({
@@ -12,4 +12,10 @@ export class JokeListComponent {
     question: '',
     answer: ''
   }];
+
+  @Output() deleteJokeEvent = new EventEmitter<number>()
+
+  deleteJoke(index: number): void {
+    this.deleteJokeEvent.emit(index)
+  }
 }

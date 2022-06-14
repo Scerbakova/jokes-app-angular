@@ -1,2 +1,4 @@
 <div>{{joke?.question}}</div>
-<div>{{joke?.answer}}</div>
+<div *ngIf="showAnswer">{{joke?.answer}}</div>
+<button (click)="toggleAnswerVisibility()">{{buttonTitle}}</button>
+<button (click)="deleteJoke()">Delete</button>

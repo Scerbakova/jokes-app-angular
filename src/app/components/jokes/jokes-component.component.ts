@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Joke } from 'src/app/models/joke.model';
 
 @Component({
@@ -6,18 +6,17 @@ import { Joke } from 'src/app/models/joke.model';
   templateUrl: './jokes-component.component.html',
   styleUrls: ['./jokes-component.component.scss']
 })
-export class JokesComponentComponent implements OnInit {
+export class JokesComponentComponent {
   jokes: Joke[] = [{
-    question: "question",
-    answer: "answer",
+    question: "",
+    answer: "",
   }]
 
   addJoke(joke: Joke): void {
     this.jokes = [...this.jokes, joke]
   }
-  constructor() { }
 
-  ngOnInit(): void {
+  deleteJoke(index: number): void {
+    this.jokes.splice(index, 1);
   }
-
 }
