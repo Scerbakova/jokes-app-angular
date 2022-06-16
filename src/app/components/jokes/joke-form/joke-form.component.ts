@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   EventEmitter,
@@ -14,7 +15,7 @@ import { Joke } from 'src/app/models/joke.model';
   templateUrl: './joke-form.component.html',
   styleUrls: ['./joke-form.component.scss'],
 })
-export class JokeFormComponent implements OnInit {
+export class JokeFormComponent implements OnInit, AfterViewInit {
   @ViewChild('inputQuestion') inputQuestion: ElementRef | undefined;
 
   @Output()
